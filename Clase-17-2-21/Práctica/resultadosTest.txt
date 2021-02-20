@@ -1,0 +1,28 @@
+Argentina
+CABA
+	Almagro
+	+1 -0
+	Belgrano
+	+1 -1
+	Caballito
+	+2 -0
+Total CABA
++4 -1
+Buenos Aires
+	Avellaneda
+	+1 -0
+	Moron
+	+1 -0
+Total Buenos Aires
++2 -0
+La Pampa
+	Santa Rosa
+	+0 -1
+Total La Pampa
++0 -1
+Mendoza
+	Santa Rosa
+	+1 -0
+Total Mendoza
++1 -0
+Total Pais +7 -2
