@@ -16,52 +16,44 @@ typedef struct  {
 	int sucursal;
 } TRSocioNuevo;
 
-int i = 0;
+void cargarStruct(FILE *archivo, int dni, int socio, String nombre) {
+	TRSocio registro;
 
-void cargarStruct(TRSocio *registro, int dni, int socio, String nombre) {
-	registro[i].dni = dni;
-	registro[i].socio = socio;
-	strcpy(registro[i].nombre, nombre);
-	i++;
+	registro.dni = dni;
+	registro.socio = socio;
+	strcpy(registro.nombre, nombre);
+	fwrite(&registro, sizeof(registro), 1, archivo);
 }
 
-void cargarStructNuevo(TRSocioNuevo *registro, int dni, int socio, String nombre, int sucursal) {
-	registro[i].dni = dni;
-	registro[i].socio = socio;
-	strcpy(registro[i].nombre, nombre);
-	registro[i].sucursal = sucursal;
-	i++;
+void cargarStructNuevo(FILE *archivo, int dni, int socio, String nombre, int sucursal) {
+	TRSocioNuevo registro;
+
+	registro.dni = dni;
+	registro.socio = socio;
+	strcpy(registro.nombre, nombre);
+	registro.sucursal = sucursal;
+	fwrite(&registro, sizeof(registro), 1, archivo);
 }
 
 void cargarDatos(FILE *archivo, int indice) {
 
-	TRSocio registro[100];
-	TRSocioNuevo registroNuevos[100];
-	int j = 0;
-
 	if(indice == 1) {
-		cargarStruct(registro, 11111111, 4, "Uno");
-		cargarStruct(registro, 22222222, 6, "Dos");
-		cargarStruct(registro, 33333333, 2, "Tres");
-		cargarStruct(registro, 44444444, 8, "Cuatro");
-		cargarStruct(registro, 55555555, 23, "Cinco");
-		cargarStruct(registro, 66666666, 9, "Seis");
-		cargarStruct(registro, 77777777, 25, "Siete");
-		cargarStruct(registro, 88888888, 1, "Ocho");
-		cargarStruct(registro, 99999999, 15, "Nueve");
-		for(j = 0; j < i; j++) {
-			fwrite(&registro[j], sizeof(registro[j]), 1, archivo);
-		}
-
+		cargarStruct(archivo, 11111111, 4, "Uno");
+		cargarStruct(archivo, 22222222, 6, "Dos");
+		cargarStruct(archivo, 33333333, 2, "Tres");
+		cargarStruct(archivo, 44444444, 8, "Cuatro");
+		cargarStruct(archivo, 55555555, 23, "Cinco");
+		cargarStruct(archivo, 66666666, 9, "Seis");
+		cargarStruct(archivo, 77777777, 25, "Siete");
+		cargarStruct(archivo, 88888888, 1, "Ocho");
+		cargarStruct(archivo, 99999999, 15, "Nueve");
+		
 	} else if (indice == 2) {
-		cargarStructNuevo(registroNuevos, 12121212, 64, "Doce", 3);
-		cargarStructNuevo(registroNuevos, 23232323, 90, "Veintitres", 2);
-		cargarStructNuevo(registroNuevos, 44444444, 8, "Cuarenta y cuatro", 3);
-		cargarStructNuevo(registroNuevos, 45454545, 43, "Cuarenta y cinco", 4);
-		cargarStructNuevo(registroNuevos, 66666666, 9, "Sesenta y seis", 5);
-		for(j = 0; j < i; j++) {
-			fwrite(&registroNuevos[j], sizeof(registroNuevos[j]), 1, archivo);
-		}
+		cargarStructNuevo(archivo, 12121212, 64, "Doce", 3);
+		cargarStructNuevo(archivo, 23232323, 90, "Veintitres", 2);
+		cargarStructNuevo(archivo, 44444444, 8, "Cuarenta y cuatro", 3);
+		cargarStructNuevo(archivo, 45454545, 43, "Cuarenta y cinco", 4);
+		cargarStructNuevo(archivo, 66666666, 9, "Sesenta y seis", 5);
 	}
 }
 
