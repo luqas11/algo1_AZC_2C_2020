@@ -1,6 +1,6 @@
 
 > **Note**  
-> Usé este repo público para subir el código de los ejercicios de práctica que hice mientras cursaba Algoritmos y Programación I en la FIUBA. Cuando terminé de cursar la materia, lo dejé visible y lo archivé.
+> Usé este repo público para subir el código de los ejercicios de práctica que hice mientras cursaba Algoritmos y Programación I en la FIUBA. Cuando terminé de cursar la materia, lo archivé y lo dejé visible.
 
 # algo1_AZC_2C_2020
 
