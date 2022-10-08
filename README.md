@@ -9,4 +9,4 @@ Armo este repo para subir el 1er parcial y los ejercicios de práctica que vaya 
 
 Cualquier otra solución es bienvenida, avísenme y doy los permisos necesarios para poder subir más archivos.
 
-###### - _Lucas C_
+###### - _Lucas CT_
