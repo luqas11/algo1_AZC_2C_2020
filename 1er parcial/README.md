@@ -14,5 +14,3 @@ Con esto último no estoy de acuerdo, porque teniendo en cuenta lo que indica la
 ###### Ejercicio 4:
 3/4  
 No consideré como longitud incorrecta cuando tiene menos cifras de las indicadas.
-
-###### - _Lucas CT_
